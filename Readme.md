@@ -21,9 +21,9 @@ This is a living document. Topics will be updated as the course progresses and m
 - Recursion
 - Sorting Algorithms
 - Arrays & Strings  
-*(...more to come!)*
+  _(...more to come!)_
 
-> 📌 *More topics will be added regularly as I continue the course and update notes.*
+> 📌 _More topics will be added regularly as I continue the course and update notes._
 
 ---
 
