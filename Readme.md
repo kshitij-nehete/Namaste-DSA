@@ -18,7 +18,7 @@ This repository contains comprehensive notes, explanations, and problem solution
 This is a living document. Topics will be updated as the course progresses and more content is added.
 
 - Arrays 
-  _(...more to come!)_
+- _(...more to come!)_
 
 > 📌 _More topics will be added regularly as I continue the course and update notes._
 
