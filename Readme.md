@@ -18,8 +18,8 @@ This repository contains comprehensive notes, explanations, and problem solution
 This is a living document. Topics will be updated as the course progresses and more content is added.
 
 - [Warm Up](https://github.com/kshitij-nehete/Namaste-DSA/tree/main/01_Warm_Up%20%F0%9F%A7%A0)
-- [Time & Space Complexity](https://github.com/kshitij-nehete/Namaste-DSA/tree/main/02_Time_%26_Space_Complexity)
-- [Arrays Level 01](https://github.com/kshitij-nehete/Namaste-DSA/tree/main/03_Arrays_Level_01)
+- [Time & Space Complexity](https://github.com/kshitij-nehete/Namaste-DSA/tree/main/02_Time_%26_Space_Complexity%20%E2%8F%B3)
+- [Arrays Level 01](https://github.com/kshitij-nehete/Namaste-DSA/tree/main/03_Arrays_Level_01%20%F0%9F%94%A2)
  
 
 > 📌 _More topics will be added regularly as I continue the course and update notes._
