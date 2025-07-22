@@ -1,13 +1,11 @@
-function countDigit(num) {
-  let count = 0;
-
-  while (num > 0) {
-    num = Math.floor(num / 10);
-    count++;
+function print(x) {
+  if (x > n) {
+    return;
   }
 
-  return count;
+  console.log(x);
+  print(++x);
 }
 
-console.log(countDigit(2345));
-
+let n = 10;
+print(1)
