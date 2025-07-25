@@ -21,8 +21,7 @@ For example: 5! = 5 × 4 × 3 × 2 × 1 = 120
 ```js
 // Factorial of n
 function factorial(num) {
-  
-  if(num === 0) {
+  if (num === 0) {
     return 1;
   }
   return num * factorial(num - 1);
@@ -37,6 +36,7 @@ console.log(factorial(5)); // Output: 120
 **Recursive Case**: `return num * factorial(num - 1);` - Multiply current number by factorial of previous number
 
 ### How it works for `factorial(5)`:
+
 - `factorial(5)` returns `5 * factorial(4)`
 - `factorial(4)` returns `4 * factorial(3)`
 - `factorial(3)` returns `3 * factorial(2)`
@@ -64,6 +64,7 @@ Results cascade back: `5 × 4 × 3 × 2 × 1 × 1 = 120`
 ## 🔄 Alternative Solutions
 
 ### Iterative Approach
+
 ```js
 function factorialIterative(num) {
   let result = 1;
@@ -75,6 +76,7 @@ function factorialIterative(num) {
 ```
 
 ### With Edge Case Handling
+
 ```js
 function factorialWithValidation(num) {
   if (num < 0) {

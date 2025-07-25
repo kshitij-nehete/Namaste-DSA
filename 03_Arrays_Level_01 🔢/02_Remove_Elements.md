@@ -1,113 +1,53 @@
-# 🔁 Remove Duplicates from Sorted Array
+# 🗑️ Remove Element
 
-Removing duplicates from a sorted array is a common interview problem. Let's see how to solve it efficiently in JavaScript! 🚀
-
----
+Remove all instances of a given value from an array in-place and return the new length. This is a classic two-pointer technique problem! 🎯
 
 ## 📝 Problem Statement
 
-Given a sorted array, remove the duplicates **in-place** such that each unique element appears only once.
+Given an integer array `nums` and an integer `val`, remove all occurrences of `val` in `nums` **in-place**. The order of the elements may be changed. Then return the number of elements in `nums` which are not equal to `val`.
 
-Return the new length of the array after duplicates have been removed.
+Consider the number of elements in `nums` which are not equal to `val` be `k`, to get accepted, you need to do the following things:
 
-- [LeetCode Problem Link](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
+- Change the array `nums` such that the first `k` elements of `nums` contain the elements which are not equal to `val`
+- Return `k`
 
----
+- [LeetCode Problem Link](https://leetcode.com/problems/remove-element/)
 
-## 💡 Notes & Approach
+## 💡 Approach
 
-- Always read the problem statement carefully for hints and ideas.
-
-- Analyze the provided examples to understand the requirements.
-
-- "In-place" means you should modify the original array without using extra space for another array.
-
----
-
-## 🧩 Example
-
-Input:
-
-`[1, 2, 2, 3, 3, 3, 3, 4, 5, 5, 6, 7, 7, 8, 9, 9, 9]`
-
-Output:
-
-`[1, 2, 3, 4, 5, 6, 7, 8, 9]` (new length: 9)
-
----
+- Use a slow pointer `x` to track the position where the next valid element should be placed
+- Use a fast pointer `i` to iterate through the array
+- When we find an element that is not equal to `val`, place it at position `x` and increment `x`
+- Skip elements that are equal to `val`
+- Return `x` which represents the count of valid elements
 
 ## 🛠️ Solution
 
 ```js
 /**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+    let x = 0;
 
- * @param {number[]} nums
-
- * @return {number}
-
- */
-
-var removeDuplicates = function (nums) {
-  let x = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] > nums[x]) {
-      x = x + 1;
-
-      nums[x] = nums[i];
-    }
-  }
-
-  return x + 1;
+    for(let i = 0; i  num !== val).length;
 };
 
-// Example usage:
+// Two-pointer with swapping from end
+var removeElementSwap = function(nums, val) {
+    let left = 0;
+    let right = nums.length - 1;
 
-let nums = [1, 2, 2, 3, 3, 3, 3, 4, 5, 5, 6, 7, 7, 8, 9, 9, 9];
-
-let newLength = removeDuplicates(nums);
-
-console.log(newLength); // Output: 9
-
-console.log(nums.slice(0, newLength)); // Output: [1,2,3,4,5,6,7,8,9]
+    while (left <= right) {
+        if (nums[left] === val) {
+            nums[left] = nums[right];
+            right--;
+        } else {
+            left++;
+        }
+    }
+    return left;
+};
 ```
-
----
-
-## 🧠 Explanation
-
-- Since the array is sorted, duplicates are always adjacent.
-
-- We use a pointer `x` to track the position of the last unique element.
-
-- We iterate through the array:
-
-- If the current element is greater than the last unique element (`nums[x]`), we increment `x` and update `nums[x]` with the current element.
-
-- After the loop, the first `x + 1` elements of `nums` are unique.
-
-- The function returns the new length (`x + 1`).
-
----
-
-## 🖨️ Output
-
-```
-
-9
-
-[1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-```
-
----
-
-## 📝 Notes
-
-- The solution works in O(n) time and O(1) extra space.
-
-- Only the first part of the array (up to the returned length) contains the unique elements.
-
-- This is a classic two-pointer technique for array problems! 🏆
-
----
