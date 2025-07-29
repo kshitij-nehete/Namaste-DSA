@@ -19,7 +19,7 @@ Based on the comparison with the target:
 ```js
 if (middle element == target) {
     return "mil gaya bhai" // Found the target!
-} else if (middle element  target) {
+} else if (middle element  < target) {
     return "bhai iska matlab target left side ko hai" // Target is on the left side
 }
 ```
@@ -42,31 +42,28 @@ new middle element = left element + (prev middle element - 1) / 2
 
 ```js
 /**
- * Binary Search Algorithm
- * @param {number[]} nums - Sorted array to search in
- * @param {number} target - Element to find
- * @return {number} - Index of element if found, -1 otherwise
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
  */
-function binarySearch(nums, target) {
-    let left = 0;
-    let right = nums.length - 1;
+var search = function (nums, target) {
+  let left = 0;
+  let right = arr.length - 1;
 
-    while (left  right) {
-        return -1;
-    }
-
+  while (right >= left) {
     let middle = Math.floor((left + right) / 2);
 
-    if (nums[middle] === target) {
-        return middle; // "mil gaya bhai"
-    } else if (nums[middle] < target) {
-        // "target right side ko hai"
-        return binarySearchRecursive(nums, target, middle + 1, right);
+    if (target === nums[middle]) {
+      return middle;
+    } else if (target < nums[middle]) {
+      right = middle - 1;
     } else {
-        // "target left side ko hai"
-        return binarySearchRecursive(nums, target, left, middle - 1);
+      left = middle + 1;
     }
-}
+  }
+
+  return -1;
+};
 ```
 
 ## 📝 Notes
