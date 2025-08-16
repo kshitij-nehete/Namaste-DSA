@@ -2,7 +2,7 @@
 
 Selection sort is a simple in-place comparison sorting algorithm. It repeatedly selects the minimum (or maximum) element from the unsorted part of the array and moves it to its correct position.
 
----
+***
 
 ## 📝 How Selection Sort Works
 
@@ -11,7 +11,7 @@ Selection sort is a simple in-place comparison sorting algorithm. It repeatedly 
 3. **Move the boundary** of the sorted region to the right by one.
 4. **Repeat** until all elements are sorted.
 
----
+***
 
 ## 🛠️ Corrected Solution
 
@@ -41,34 +41,50 @@ function selectionSort(arr) {
 // Example usage:
 let array = [64, 25, 12, 22, 11];
 console.log("Original:", array);
-console.log("Sorted:", selectionSort([...array])); // Output: [11, 12, 22, 25, 64]
+console.log("Sorted:", selectionSort([...array]));  // Output: [11, 12, 22, 25, 64]
 ```
 
----
+
+***
 
 ## 🔍 Dry Run of Selection Sort
 
-Let's dry run `selectionSort([64,tep by step:
+Let's dry run `selectionSort()` step by step:
 
 ### **Initial Array**:
 
-[64, 25,\*Pass 1 (i = 0):\*\*
+#### **Pass 1 (i = 0):**
 
 - Find min in index 0–4: min = 11 (index 4)
-- Swap arr and arr[1]
-- Array: [11, 25, 12,Pass 2 (i = 1):\*\*
-- Find min in index 1–4: min = 12 (index 2)
-- Swap arr and arr[2][3]
-- Array: [11, 12, 25,Pass 3 (i = 2):\*\*
-- Find min in index 2–4: min = 22 (index 3)
-- Swap arr and arr[3][4]
-- Array: [11, 12, 22,Pass 4 (i = 3):\*\*
-- Find min in index 3–4: min = 25 (index 3)
-- Swap arr and arr (no change)[4]
-- Array: [11,further passes needed.
+- Swap arr and arr[^1]
+- Array:
 
-**Final Sorted Array:**  
-[11,\*
+
+#### **Pass 2 (i = 1):**
+
+- Find min in index 1–4: min = 12 (index 2)
+- Swap arr and arr[^2][^3]
+- Array:
+
+
+#### **Pass 3 (i = 2):**
+
+- Find min in index 2–4: min = 22 (index 3)
+- Swap arr and arr[^3][^4]
+- Array:
+
+
+#### **Pass 4 (i = 3):**
+
+- Find min in index 3–4: min = 25 (index 3)
+- Swap arr and arr (no change)[^4]
+- Array:
+
+No further passes needed.
+
+**Final Sorted Array:**
+
+***
 
 ## 🧠 Key Observations
 
@@ -76,7 +92,7 @@ Let's dry run `selectionSort([64,tep by step:
 - Number of passes: `n-1` for array of size `n`.
 - The algorithm always performs the same number of comparisons, regardless of initial order.
 
----
+***
 
 ## 📊 Complexity Analysis
 
@@ -85,10 +101,14 @@ Let's dry run `selectionSort([64,tep by step:
 - **Stability:** Not stable by default (can be modified for stability)
 - **Best for:** Small or nearly sorted arrays
 
----
+***
 
 ## 📝 Notes
 
 - Simple, easy to implement.
 - Not efficient on large datasets compared to more advanced algorithms (like quicksort or mergesort).
 - Useful for understanding basic sorting principles.
+
+<div style="text-align: center">⁂</div>
+
+
